@@ -1,0 +1,9 @@
+Total number of A is 20
+Total number of M is 52
+Total number of B is 48
+Total number of N is 130
+Total number of C is 121
+Total number of D is 115
+API Recall : 0.28
+Quality Precision : 0.27
+Quality Recall :  0.10
