@@ -1,6 +1,6 @@
 __author__ = 'fengchen'
 
-from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 import numpy as np
 import copy
 def main():
@@ -21,7 +21,8 @@ def main():
                 for i in range(u) + range(u+1, n_users):
                     X.append(data[i][:m] + data[i][m+1:])
                     Y.append(data[i][m])
-                lr = LogisticRegression()
+                
+                lr = SVC(probability=True)
                 lr.fit(X,Y)
                 val = lr.predict_proba([data[u][:m] + data[u][m+1:]])
                 pred[u][m] = round(val[0][1],2)

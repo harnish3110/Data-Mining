@@ -22,13 +22,11 @@ f.close()
 
 # Load data from the text file: data.baske
 data = Orange.data.Table("data.basket")
-print data,'\n\n\n'
 
 # Identify association rules with supports at least 0.3
-rules = Orange.associate.AssociationRulesSparseInducer(data, support = 0.1)
-print rules, '\n\n\n'
+rules = Orange.associate.AssociationRulesSparseInducer(data, support = 0.3)
 
-# print out rules
+    # print out rules
 print "%4s %4s  %s" % ("Supp", "Conf", "Rule")
 for r in rules[:]:
     print "%4.1f %4.1f  %s" % (r.support, r.confidence, r)
